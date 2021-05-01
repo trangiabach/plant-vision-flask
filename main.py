@@ -29,9 +29,9 @@ with app.app_context():
     db.create_all()
 
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-UPLOAD_FOLDER = '/plant-disease-detector/templates/templates/dist'
+UPLOAD_FOLDER = 'uploads'
 
-model =tf.keras.models.load_model('detection-model.h5',compile=False)
+model =tf.keras.models.load_model('detect.h5',compile=False)
 
 
 def model_predict(img_path, model):
